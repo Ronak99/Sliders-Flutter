@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:screen/screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,13 +43,12 @@ class _SliderContainerState extends State<SliderContainer> {
           disabledThumbRadius: 10,
         ),
       ),
-      child: /* Slider */ CupertinoSlider( 
-        activeColor: CupertinoColors.activeGreen,
+      child: RangeSlider( 
         min: 0.0,
         max: 1.0,
-        value: brightness,
+        value: values,
         onChanged: (val) {
-          Screen.setBrightness(brightness);
+          
           setState(() {
             brightness = val;
           });
